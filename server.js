@@ -44,7 +44,9 @@ try
     (request,response,next)=>
     {
       response.setHeader
-      ('Access-Control-Allow-Origin','*');
+	    (
+		'Access-Control-Allow-Origin', process.env.FRONT_END_URL
+	    );
 
       response.setHeader
       (
