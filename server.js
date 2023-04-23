@@ -43,11 +43,13 @@ try
         (
             (request,response,next)=>
             {
-                response.setHeader
+                /*
+		response.setHeader
                 (
                     'Access-Control-Allow-Origin',
                     '*'
                 );
+		*/
 
                 response.setHeader
                     (
