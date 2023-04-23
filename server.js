@@ -57,6 +57,12 @@ try
         'Access-Control-Allow-Methods',
         'GET, POST, PATCH, DELETE, OPTIONS, PUT'
       );
+	    
+    response.setHeader
+	(
+	    'Access-Control-Allow-Credentials',
+	    'true'
+	);
 
       next();
     }
