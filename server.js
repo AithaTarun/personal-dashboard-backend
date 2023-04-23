@@ -40,36 +40,27 @@ app.use
 try
 {
     app.use //To handle CORS error.
-        (
-            (request,response,next)=>
-            {
-		response.setHeader
-                (
-                    'Access-Control-Allow-Origin',
-                    '*'
-                );
+  (
+    (request,response,next)=>
+    {
+      response.setHeader
+      ('Access-Control-Allow-Origin','*');
 
-                response.setHeader
-                (
-                    'Access-Control-Allow-Headers',
-                    'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-                );
+      response.setHeader
+      (
+        'Access-Control-Allow-Headers',
+        'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+      );
 
-                response.setHeader
-                (
-                    'Access-Control-Allow-Methods',
-                    'GET, POST, PATCH, DELETE, OPTIONS, PUT'
-                );
+      response.setHeader
+      (
+        'Access-Control-Allow-Methods',
+        'GET, POST, PATCH, DELETE, OPTIONS, PUT'
+      );
 
-                response.setHeader
-                (
-                    'Access-Control-Allow-Credentials',
-                    'true'
-                )
-
-                next();
-            }
-        );
+      next();
+    }
+  );
 }
 catch (e)
 {
